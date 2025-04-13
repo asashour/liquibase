@@ -476,7 +476,6 @@ public interface Database extends PrioritizedService, AutoCloseable {
      * Executes the statements passed as argument to a target {@link Database}
      *
      * @param statements an array containing the SQL statements to be issued
-     * @param database the target {@link Database}
      * @throws DatabaseException if there were problems issuing the statements
      */
     void execute(SqlStatement[] statements, List<SqlVisitor> sqlVisitors) throws LiquibaseException;
