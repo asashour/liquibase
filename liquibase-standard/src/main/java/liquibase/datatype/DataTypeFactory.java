@@ -119,7 +119,7 @@ public class DataTypeFactory {
         // most data types, e.g. VARCHAR2(255 CHAR) -> VARCHAR2. We will retrieve that length information again later,
         // but for the moment, we are only interested in the "naked" data type name.
         if (dataTypeName.matches(".+\\(.*\\).*")) {
-            dataTypeName = dataTypeName.replaceFirst("\\s*\\(.*\\)", "");
+            dataTypeName = dataTypeName.replaceAll("\\s*\\([^()]*\\)", "");
         }
 
         // Remove everything { after the first opening curly bracket

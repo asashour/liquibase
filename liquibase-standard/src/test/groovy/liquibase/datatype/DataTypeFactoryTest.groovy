@@ -220,6 +220,7 @@ class DataTypeFactoryTest extends Specification {
         "timestamp(6)"                                 | new OracleDatabase()   | "TIMESTAMP(6)"                                 | TimestampType | false                 | null
         "TIMESTAMP WITH TIMEZONE"                      | new OracleDatabase()   | "TIMESTAMP WITH TIMEZONE"                      | TimestampType | false                 | "WITH TIMEZONE"
         "TIMESTAMP(6) WITH TIMEZONE"                   | new OracleDatabase()   | "TIMESTAMP(6) WITH TIMEZONE"                   | TimestampType | false                 | "WITH TIMEZONE"
+        "TIMESTAMP(6) WITH TIMEZONE(13)"               | new OracleDatabase()   | "TIMESTAMP(6) WITH TIMEZONE"                   | TimestampType | false                 | "WITH TIMEZONE"
         "timestamp without timezone"                   | new OracleDatabase()   | "TIMESTAMP"                                    | TimestampType | false                 | "without timezone"
         "timestamp(6) without timezone"                | new OracleDatabase()   | "TIMESTAMP(6)"                                 | TimestampType | false                 | "without timezone"
         "timestamptz"                                  | new OracleDatabase()   | "TIMESTAMP"                                    | TimestampType | false                 | null
